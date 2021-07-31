@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ImgViewHeroi"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:id="@+id/TxtViewNomeHeroi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="TEXTO"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/ImgViewHeroi"
+        app:layout_constraintStart_toEndOf="@id/ImgViewHeroi"
+        app:layout_constraintTop_toTopOf="@id/ImgViewHeroi" />
+
+    <FrameLayout
+        android:layout_width="450dp"
+        android:layout_height="5px"
+        android:layout_marginTop="20dp"
+        android:background="#F44336"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ImgViewHeroi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

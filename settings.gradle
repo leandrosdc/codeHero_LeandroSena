@@ -1,0 +1,2 @@
+rootProject.name = "CodeHero_OBJECTIVE"
+include ':app'
