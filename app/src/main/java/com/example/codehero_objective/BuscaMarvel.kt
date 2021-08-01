@@ -1,6 +1,7 @@
 package com.example.codehero_objective
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,13 +14,29 @@ import retrofit2.Response
 import java.lang.StringBuilder
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
+import android.os.StrictMode
+import android.os.StrictMode.ThreadPolicy
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.ViewModelProvider
+import retrofit2.Retrofit
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 
 class BuscaMarvel : Fragment() {
 
     private var binding:FragmentBuscaMarvelBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -33,19 +50,11 @@ class BuscaMarvel : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val remote = ServicoWEB.createService(ServicoHeroi::class.java)
-        val call: Call<List<HeroiModelo>> = remote.list()
-        val response = call.enqueue(object : Callback<List<HeroiModelo>>{
+        //"https://gateway.marvel.com:443/"
+        //@GET("v1/public/characters?ts=1627780458&apikey=3fe17c241dedecfe5db1c099840217f1&hash=ad72d7fb8e25bf1ca9594d664e681d20")
+        //<uses-permission android:name="android.permission.INTERNET" />
+        //<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-            override fun onResponse(call: Call<List<HeroiModelo>>, response: Response<List<HeroiModelo>>) {
-                val s = response.body()
-            }
-
-            override fun onFailure(call: Call<List<HeroiModelo>>, t: Throwable) {
-                val s = t.message
-            }
-
-        })
 
         var heroi1 = HeroiModelo("Tony 1", R.drawable.tony)
         var heroi2 = HeroiModelo("Tony 1", R.drawable.tony)
@@ -53,9 +62,12 @@ class BuscaMarvel : Fragment() {
         var listaHerois = listOf<HeroiModelo>(heroi1,heroi2,heroi3,heroi1)
         val adapterHeroi = AdapterHeroi(listaHeroi = listaHerois)
 
-        binding?.txtBarraVermelha?.text = MD5("Leandro")
+
+
+
         binding?.let {
             with(it){
+                //txtBarraVermelha.text = getSuperHeroes()
                 recycleDadosHeroi.layoutManager = LinearLayoutManager(context)
                 recycleDadosHeroi.adapter = adapterHeroi
             }
@@ -69,18 +81,6 @@ class BuscaMarvel : Fragment() {
         binding = null
     }
 
-    fun MD5(md5: String): String? {
-        try {
-            val md = MessageDigest.getInstance("MD5")
-            val array = md.digest(md5.toByteArray(charset("UTF-8")))
-            val sb = StringBuffer()
-            for (i in array.indices) {
-                sb.append(Integer.toHexString(array[i] + 0xFF or 0x100).substring(1, 3))
-            }
-            return sb.toString()
-        } catch (e: NoSuchAlgorithmException) {
-        } catch (ex: Exception) {
-        }
-        return null
-    }
+
 }
+

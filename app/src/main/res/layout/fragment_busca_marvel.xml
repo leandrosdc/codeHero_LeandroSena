@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BuscaMarvel">
 
+
     <FrameLayout
         android:id="@+id/frameHeaderBusca"
         android:layout_width="wrap_content"
@@ -76,7 +77,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/txtNomePersonagem"
-        app:layout_constraintBottom_toTopOf="@id/FrameBarraVermelha"
         android:layout_marginBottom="12px"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
@@ -88,6 +88,7 @@
             android:layout_height="wrap_content"
             />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <FrameLayout
         android:id="@+id/FrameBarraVermelha"
@@ -115,10 +116,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleDadosHeroi"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/FrameBarraVermelha"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
