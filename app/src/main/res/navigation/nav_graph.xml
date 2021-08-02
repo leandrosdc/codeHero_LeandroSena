@@ -9,7 +9,11 @@
         android:id="@+id/buscaMarvel"
         android:name="com.example.codehero_objective.BuscaMarvel"
         android:label="fragment_busca_marvel"
-        tools:layout="@layout/fragment_busca_marvel" />
+        tools:layout="@layout/fragment_busca_marvel" >
+        <action
+            android:id="@+id/action_buscaMarvel_to_seriesMarvel"
+            app:destination="@id/seriesMarvel" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentMain"
         android:name="com.example.codehero_objective.FragmentMain"
@@ -18,5 +22,25 @@
         <action
             android:id="@+id/action_fragmentMain_to_buscaMarvel"
             app:destination="@id/buscaMarvel" />
+        <action
+            android:id="@+id/action_fragmentMain_to_seriesMarvel"
+            app:destination="@id/seriesMarvel" />
+        <action
+            android:id="@+id/action_fragmentMain_to_eventoMarvel"
+            app:destination="@id/eventoMarvel" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventoMarvel"
+        android:name="com.example.codehero_objective.EventoMarvel"
+        android:label="fragment_evento_marvel"
+        tools:layout="@layout/fragment_evento_marvel" />
+    <fragment
+        android:id="@+id/seriesMarvel"
+        android:name="com.example.codehero_objective.SeriesMarvel"
+        android:label="fragment_series_marvel"
+        tools:layout="@layout/fragment_series_marvel" >
+        <action
+            android:id="@+id/action_seriesMarvel_to_eventoMarvel"
+            app:destination="@id/eventoMarvel" />
     </fragment>
 </navigation>

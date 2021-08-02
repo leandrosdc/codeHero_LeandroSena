@@ -7,9 +7,11 @@
         <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/drawable/circle.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/drawable/img.xml" value="0.23489583333333333" />
-        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/activity_main.xml" value="0.2866847826086957" />
-        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/fragment_busca_marvel.xml" value="0.2866847826086957" />
-        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/fragment_main.xml" value="0.25" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/fragment_busca_marvel.xml" value="0.18" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/fragment_evento_marvel.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/fragment_main.xml" value="0.2" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/fragment_series_marvel.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/leand/AndroidStudioProjects/CodeHero_OBJECTIVE/app/src/main/res/layout/recyclerlistaheroi.xml" value="0.33" />
       </map>
     </option>

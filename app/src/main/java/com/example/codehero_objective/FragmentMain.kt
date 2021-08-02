@@ -32,7 +32,8 @@ class FragmentMain : Fragment() {
         val tab = binding?.tabLayout?.getTabAt(0)
         tab?.select()
 
-        val fragmentList = listOf(BuscaMarvel(),BuscaMarvel(),BuscaMarvel())
+
+        val fragmentList = listOf(BuscaMarvel(),SeriesMarvel(), EventoMarvel())
         val fragmentTitleList = listOf("Nome", "Series", "Eventos")
 
         activity?.let{

@@ -1,20 +1,20 @@
-package com.example.codehero_objective
+package com.example.codehero_objective.network
 
 import com.google.gson.annotations.SerializedName
 
 data class ModeloHeroi(
     @SerializedName("id")
-    var id:Int,
+    var id:Int? = 0 ,
 
     @SerializedName("name")
-    var nomeHeroi:String,
+    var nomeHeroi:String? = "",
 
     @SerializedName("description")
-    var descricaoHeroi:String,
+    var descricaoHeroi:String? = "",
 
     @SerializedName("path")
-    var caminhoImagem:String,
+    var caminhoImagem:String? = "",
 
     @SerializedName("extension")
-    var extencaoImagem:String,
-)
+    var extencaoImagem:String? = "",
+){}

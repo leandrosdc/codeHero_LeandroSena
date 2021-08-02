@@ -5,4 +5,10 @@
     <string name="title_activity_main_teste">MainActivityTeste</string>
     <string name="marvel">MARVEL</string>
     <string name="busca"><u>BUSCA</u></string>
+    <string name="nome"><u>Nome</u></string>
+    <string name="eventos"><u>Eventos</u></string>
+    <string name="series"><u>Series</u></string>
+    <string name="teste_front_end">TESTE FRONT-END</string>
+    <string name="nome_do_personagem">Nome do Personagem</string>
+    <string name="texto">TEXTO</string>
 </resources>

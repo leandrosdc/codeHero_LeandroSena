@@ -18,9 +18,9 @@ class AdapterHeroi(private val listaHeroi:List<HeroiModelo>):RecyclerView.Adapte
     override fun getItemCount() = listaHeroi.size
 
     class ViewHolder(val binding:RecyclerlistaheroiBinding):RecyclerView.ViewHolder(binding.root){
-        fun bind(heroi:HeroiModelo){
+        fun bind(heroi: HeroiModelo){
+            binding.TxtViewTexto.text = heroi.nomeHeroi
             binding.ImgViewHeroi.setImageResource(heroi.fotoHeroi)
-            binding.TxtViewNomeHeroi.text = heroi.nomeHeroi
         }
     }
 }

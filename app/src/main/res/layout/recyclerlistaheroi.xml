@@ -17,11 +17,11 @@
         app:civ_border_color="#FF000000"/>
 
     <TextView
-        android:id="@+id/TxtViewNomeHeroi"
+        android:id="@+id/TxtViewTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="TEXTO"
+        android:text="@string/texto"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@id/ImgViewHeroi"
         app:layout_constraintStart_toEndOf="@id/ImgViewHeroi"

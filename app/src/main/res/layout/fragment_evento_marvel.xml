@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".BuscaMarvel">
+    tools:context=".EventoMarvel">
 
 
     <FrameLayout
@@ -21,7 +21,7 @@
             android:id="@+id/txtBarraVermelha"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/nome"
+            android:text="@string/eventos"
             android:textSize="20sp"
             android:textColor="@color/white"
             android:layout_marginStart="100dp"
@@ -29,9 +29,6 @@
             app:layout_constraintBottom_toBottomOf="@id/FrameBarraVermelha"
             app:layout_constraintTop_toTopOf="@id/FrameBarraVermelha"/>
     </FrameLayout>
-
-
-
 
     <ScrollView
         android:id="@+id/scrollViewRecycler"
@@ -43,13 +40,11 @@
         android:layout_marginBottom="30dp"
         >
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleDadosHeroi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-        />
+            />
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
