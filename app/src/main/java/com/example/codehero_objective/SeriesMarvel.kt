@@ -37,7 +37,7 @@ class SeriesMarvel : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         var heroi1 = HeroiModelo("Tony Stark", R.drawable.tony, "Demonio na Garrafa", "Guerra Infinita")
         var listaHerois = listOf(heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,)
-        val adapterSeries = AdapterHeroi(listaHerois)
+        val adapterSeries = AdapterSeries(listaHerois)
         binding?.let {
             with(it){
                 recycleDadosHeroi.layoutManager = LinearLayoutManager(context)
@@ -45,8 +45,6 @@ class SeriesMarvel : Fragment() {
             }
         }
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

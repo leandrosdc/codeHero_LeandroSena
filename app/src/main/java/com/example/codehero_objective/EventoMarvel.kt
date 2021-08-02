@@ -31,7 +31,7 @@ class EventoMarvel : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         var heroi1 = HeroiModelo("Tony Stark", R.drawable.tony, "Demonio na Garrafa", "Guerra Infinita")
         var listaEventos = listOf(heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,heroi1,)
-        val adapterEventos = AdapterHeroi(listaEventos)
+        val adapterEventos = AdapterEventos(listaEventos)
         binding?.let {
             with(it){
                 recycleDadosHeroi.layoutManager = LinearLayoutManager(context)

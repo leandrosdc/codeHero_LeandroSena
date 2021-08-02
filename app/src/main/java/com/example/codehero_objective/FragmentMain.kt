@@ -32,7 +32,6 @@ class FragmentMain : Fragment() {
         val tab = binding?.tabLayout?.getTabAt(0)
         tab?.select()
 
-
         val fragmentList = listOf(BuscaMarvel(),SeriesMarvel(), EventoMarvel())
         val fragmentTitleList = listOf("Nome", "Series", "Eventos")
 
@@ -41,8 +40,7 @@ class FragmentMain : Fragment() {
             binding?.tabAdapterContainer?.adapter = viewPagerAdapter
             binding?.tabLayout?.setupWithViewPager(binding?.tabAdapterContainer)
         }
-}
-
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null

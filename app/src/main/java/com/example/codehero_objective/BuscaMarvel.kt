@@ -51,12 +51,12 @@ class BuscaMarvel : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         val retrofitClient = NetworkUtils.getRetrofitInstance("https://gateway.marvel.com/v1/public/")
         val endpoint = retrofitClient.create(Endpoint::class.java)
         val callback = endpoint.getPosts()
         val callback2 = endpoint.getPosts2()
+
+
 
         callback2.enqueue(object : Callback<ModeloHeroi> {
             override fun onFailure(call: Call<ModeloHeroi>, t: Throwable) { t.message?.let { Log.i("TESTENOK2", it) } }
